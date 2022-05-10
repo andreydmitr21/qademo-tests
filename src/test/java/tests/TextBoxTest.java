@@ -3,13 +3,16 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+
+import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class TextBoxTest {
     String firstName="Alex";
@@ -27,12 +30,14 @@ public class TextBoxTest {
     String state="Haryana";
     String city="Panipat";
 
+    File file = new File("src/test/resources/pik.png");
 
     @BeforeAll
     static void beforeAll() {
         //System.out.println("beforeAll");
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "4320x7680";
+        Configuration.browserSize = "1920x1080";
+
     }
 
     @Test
@@ -41,8 +46,21 @@ public class TextBoxTest {
 
         $(".main-header").shouldHave(text("Practice Form"));
 
+        actions().moveToElement($("input#firstName.mr-sm-2.form-control")).
+                sendKeys(Keys.chord(Keys.CONTROL, "-")).perform();
+        actions().moveToElement($("input#firstName.mr-sm-2.form-control")).
+                sendKeys(Keys.chord(Keys.CONTROL, "-")).perform();
+//        actions().//se moveToElement($("body")).
+//                sendKeys(Keys.chord(Keys.CONTROL, "-")).perform();
+//        actions().//se moveToElement($("body")).
+//                sendKeys(Keys.chord(Keys.CONTROL, "-")).perform();
+
+        //Actions builder = new Actions(driver);
+        //builder.
+        //$("body").sendKeys(Keys.chord(Keys.CONTROL, "-"));
         //System.out.println(String.format("[class^='react-datepicker__day '][aria-label*='%s %s']",
         //        birthdayMonth, birthdayDay));
+
         //System.exit(0);
         $("input#firstName.mr-sm-2.form-control").setValue(firstName);
         $("input#lastName.mr-sm-2.form-control").setValue(lastName);
@@ -65,13 +83,25 @@ public class TextBoxTest {
 
         $("#hobbiesWrapper").click();
         $(byText(hobby)).click();
-        $("input#dateOfBirthInput.form-control").shouldBe(visible).click();
-        //submit
-        $("button#submit.btn.btn-primary").click();
+
+        $("#uploadPicture").uploadFile(file);
+
+        $("#currentAddress").scrollTo();
+        $("#currentAddress").setValue(address);
+
+        $("#state").click();
+        $(byText(state)).click();
+
+        $("#city").click();
+        $(byText(city)).click();
+
+        $("#submit").scrollTo();
+        $("#submit").click();
+
 
 
         // test after submit
-//        $("#output #name").shouldHave(text("Alex"));
+        $("#output #name").shouldHave(text("Alex"));
 //        $("#output #email").shouldHave(text("alex@gmail.com"));
 //        $("#output #currentAddress").shouldHave(text("Some address"));
 //        $("#output #permanentAddress").shouldHave(text("Perm address"));
