@@ -9,7 +9,11 @@ public class FirstJUnitTest {
         System.out.println("beforeAll");
 
     }
+    @AfterAll
+    static void afterAll() {
+        System.out.println("afterAll");
 
+    }
 
     @BeforeEach
 
