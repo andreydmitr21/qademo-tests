@@ -1,12 +1,16 @@
 package junit;
 
 import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class FirstJUnitTest {
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("beforeAll");
+
+    }
+
+
     @BeforeEach
 
     void before() {
@@ -24,12 +28,12 @@ public class FirstJUnitTest {
     @Test
     void textTest() {
         // text search
-        Assertions.assertTrue(2<4);
+        System.out.println("textTest");
     }
 
     @Test
     void videoTest() {
         // video search
-        Assertions.assertTrue(2<4);
+        System.out.println("videoTest");
     }
 }
