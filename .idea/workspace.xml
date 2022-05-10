@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9c0d8b9-bd49-4b3d-a58a-474feaefe89d" name="Changes" comment="changed junit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/textBoxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="e9c0d8b9-bd49-4b3d-a58a-474feaefe89d" name="Changes" comment="created TestBoxTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/docs/CssXpathExamples.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/FirstJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FirstJUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TextBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TextBoxTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.textBoxTest.successFillTest">
+  <component name="RunManager" selected="Gradle.TextBoxTest.successFillTest">
     <configuration name="FirstJUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -116,6 +115,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TextBoxTest.successFillTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.TextBoxTest.successFillTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="textBoxTest.successFillTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -141,6 +163,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TextBoxTest.successFillTest" />
         <item itemvalue="Gradle.textBoxTest.successFillTest" />
         <item itemvalue="Gradle.FirstJUnitTest" />
         <item itemvalue="Gradle.FirstJUnitTest.simpleTest" />
@@ -226,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652175101814</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="created TestBoxTest">
+      <created>1652181934801</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652181934801</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +277,24 @@
     <MESSAGE value="added FirstJUnitTest" />
     <MESSAGE value="test" />
     <MESSAGE value="changed junit" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed junit" />
+    <MESSAGE value="created testBoxTest" />
+    <MESSAGE value="created TestBoxTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="created TestBoxTest" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/TextBoxTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/TextBoxTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
