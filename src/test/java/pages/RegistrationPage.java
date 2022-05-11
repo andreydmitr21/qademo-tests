@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
-    CalendarComponent calendarCompoent= new CalendarComponent();
+    private CalendarComponent calendarCompoent= new CalendarComponent();
     // locators
     final private SelenideElement
             hederTitle = $(".practice-form-wrapper"),
