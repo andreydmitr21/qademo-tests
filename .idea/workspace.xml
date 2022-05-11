@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9c0d8b9-bd49-4b3d-a58a-474feaefe89d" name="Changes" comment="modified TestBoxTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/pik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationFormTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TextBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TextBoxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/FirstJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FirstJUnitTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TableTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/pik.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/img/1.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +73,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/media/hdd/_/qa/idea/test/untitled/src/test/resources/img",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -78,8 +81,16 @@
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TestTable.fillInFormTest">
-    <configuration name="FirstJUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/img" />
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/src/test/img" />
+      <recent name="$PROJECT_DIR$/src/img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.RegistrationFormTests.successFillTest">
+    <configuration name="RegistrationFormTests.successFillTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -92,7 +103,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;junit.FirstJUnitTest&quot;" />
+            <option value="&quot;tests.RegistrationFormTests.successFillTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RegistrationFormTests.successFillTest" />
         <item itemvalue="Gradle.TestTable.fillInFormTest" />
         <item itemvalue="Gradle.TestTable" />
         <item itemvalue="Gradle.TextBoxTest.successFillTest" />
         <item itemvalue="Gradle.textBoxTest.successFillTest" />
-        <item itemvalue="Gradle.FirstJUnitTest" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652202455084</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="modified TestBoxTest">
+      <created>1652213678659</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652213678659</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +367,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/tests/TextBoxTest.java</url>
           <line>98</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/RegistrationFormTests.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

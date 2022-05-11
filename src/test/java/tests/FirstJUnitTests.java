@@ -1,9 +1,8 @@
 package tests;
 
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.*;
 
-public class FirstJUnitTest {
+public class FirstJUnitTests {
     @BeforeAll
     static void beforeAll() {
         System.out.println("beforeAll");
