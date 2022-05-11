@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -12,6 +13,15 @@ public class RegistrationPage {
     SelenideElement lastNameInput = $("#lastName");
     SelenideElement userEmailInput = $("#userEmail");
     SelenideElement genderInput = $("#genterWrapper");
+
+
+
+
+
+
+
+    //
+    SelenideElement resultsTable =  $(".table-responsive");
 
     // actions
     public void setFirstName(String firstName) {
@@ -30,5 +40,8 @@ public class RegistrationPage {
         genderInput.$(byText(gender)).click();
     }
 
+    public void checkForm(String field, String value) {
+        resultsTable.$(byText(field)).parent().shouldHave(text(value));
+    }
 
 }
