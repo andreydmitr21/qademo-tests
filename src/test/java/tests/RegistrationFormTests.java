@@ -27,10 +27,13 @@ public class RegistrationFormTests {
         new RegistrationPage().setLastName("Egorov");
         new RegistrationPage().setUserEmail("alex@egorov.com");
         new RegistrationPage().setGender("Other");
+        new RegistrationPage().setGender("Other");
 
         new RegistrationPage().setBirthday("2008","July","30");
-        $("#subjectsInput").setValue("Math").pressEnter();
-        $("#hobbiesWrapper").$(byText("Sports")).click();
+        new RegistrationPage().setSubjects("Math");
+        new RegistrationPage().setHobbies("Sports");
+
+
         $("#uploadPicture").uploadFromClasspath("img/1.png");
         $("#currentAddress").setValue("Some address 1");
         $("#state").scrollTo().click();

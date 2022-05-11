@@ -18,6 +18,8 @@ public class RegistrationPage {
     SelenideElement birthdayYearInput = $(".react-datepicker__year-select");
     SelenideElement birthdayMonthInput = $(".react-datepicker__month-select");
     SelenideElement birthdayInput = $("#dateOfBirthInput");
+    SelenideElement subjectsInput = $("#subjectsInput");
+    SelenideElement hobbiesInput = $("#hobbiesWrapper");
 
 
 
@@ -56,9 +58,13 @@ public class RegistrationPage {
         $(String.format("[aria-label*='%s %s']",month,day)).click();
     }
 
+    public void setSubjects(String subjects) {
+        subjectsInput.setValue(subjects).pressEnter();
+    }
 
-
-
+    public void setHobbies(String hobbies) {
+        hobbiesInput.$(byText(hobbies)).click();
+    }
 
 
 
