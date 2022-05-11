@@ -5,95 +5,118 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
 
     // locators
-    SelenideElement firstNameInput = $("#firstName");
-    SelenideElement lastNameInput = $("#lastName");
-    SelenideElement userEmailInput = $("#userEmail");
-    SelenideElement genderInput = $("#genterWrapper");
-    SelenideElement numberInput = $("#userNumber");
+    final private SelenideElement
+            hederTitle = $(".practice-form-wrapper"),
+            firstNameInput = $("#firstName"),
+            lastNameInput = $("#lastName"),
+            userEmailInput = $("#userEmail"),
+            genderInput = $("#genterWrapper"),
+            numberInput = $("#userNumber"),
 
-    SelenideElement birthdayYearInput = $(".react-datepicker__year-select");
-    SelenideElement birthdayMonthInput = $(".react-datepicker__month-select");
-    SelenideElement birthdayInput = $("#dateOfBirthInput");
-    SelenideElement subjectsInput = $("#subjectsInput");
-    SelenideElement hobbiesInput = $("#hobbiesWrapper");
-    SelenideElement pictureInput = $("#uploadPicture");
-    SelenideElement addressInput =  $("#currentAddress");
-    SelenideElement stateInput =  $("#state");
-    SelenideElement stateWrapInput =  $("#stateCity-wrapper");
-    SelenideElement cityInput =  $("#city");
-    SelenideElement cityWrapInput =  $("#stateCity-wrapper");
+    birthdayYearInput = $(".react-datepicker__year-select"),
+            birthdayMonthInput = $(".react-datepicker__month-select"),
+            birthdayInput = $("#dateOfBirthInput"),
+            subjectsInput = $("#subjectsInput"),
+            hobbiesInput = $("#hobbiesWrapper"),
+            pictureInput = $("#uploadPicture"),
+            addressInput = $("#currentAddress"),
+            stateInput = $("#state"),
+            stateWrapInput = $("#stateCity-wrapper"),
+            cityInput = $("#city"),
+            cityWrapInput = $("#stateCity-wrapper"),
 
-
-
-
-
-
-
-    //
-    SelenideElement resultsTable =  $(".table-responsive");
+    resultsTable = $(".table-responsive");
 
     // actions
-    public void setFirstName(String firstName) {
+
+    public RegistrationPage openPage() {
+        open("/automation-practice-form");
+        hederTitle.shouldHave(text("Student Registration Form"));
+        return this;
+    }
+
+    public RegistrationPage setFirstName(String firstName) {
         firstNameInput.setValue(firstName);
+        return this;
     }
 
-    public void setLastName(String lastName) {
+
+    public RegistrationPage setLastName(String lastName) {
         lastNameInput.setValue(lastName);
+        return this;
     }
 
-    public void setUserEmail(String userEmail) {
+    public RegistrationPage setUserEmail(String userEmail) {
         userEmailInput.setValue(userEmail);
+        return this;
     }
 
-    public void setGender(String gender) {
+    public RegistrationPage setGender(String gender) {
         genderInput.$(byText(gender)).click();
+        return this;
     }
-    public void setNumber(String number) {
-       numberInput.setValue(number);
+
+    public RegistrationPage setNumber(String number) {
+        numberInput.setValue(number);
+        return this;
     }
-    public void setBirthday(String year,
-                            String month,
-                            String day) {
+
+    public RegistrationPage setBirthday(String year,
+                                        String month,
+                                        String day) {
         birthdayInput.click();
         birthdayYearInput.selectOption(year);
         birthdayMonthInput.selectOption(month);
-        $(String.format("[aria-label*='%s %s']",month,day)).click();
+        $(String.format("[aria-label*='%s %s']", month, day)).click();
+        return this;
     }
 
-    public void setSubjects(String subjects) {
+    public RegistrationPage setSubjects(String subjects) {
         subjectsInput.setValue(subjects).pressEnter();
+        return this;
     }
 
-    public void setHobbies(String hobbies) {
+    public RegistrationPage setHobbies(String hobbies) {
         hobbiesInput.$(byText(hobbies)).click();
+        return this;
     }
 
-    public void setPicture(String file) {
+    public RegistrationPage setPicture(String file) {
         pictureInput.uploadFromClasspath(file);
-    }
-    public void setAddress(String address) {
-       addressInput.setValue(address);
+        return this;
     }
 
-    public void setState(String state) {
+    public RegistrationPage setAddress(String address) {
+        addressInput.setValue(address);
+        return this;
+    }
+
+    public RegistrationPage setState(String state) {
         stateInput.scrollTo().click();
         stateWrapInput.$(byText(state)).click();
+        return this;
     }
-    public void setCity(String city) {
+
+    public RegistrationPage setCity(String city) {
         cityInput.scrollTo().click();
         cityWrapInput.$(byText(city)).click();
+        return this;
     }
 
 
-
-
-
-    public void checkForm(String field, String value) {
+    public RegistrationPage checkForm(String field, String value) {
         resultsTable.$(byText(field)).parent().shouldHave(text(value));
+        return this;
+    }
+
+    public RegistrationPage beforeCheckForm() {
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        return this;
     }
 
 }

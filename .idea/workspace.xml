@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9c0d8b9-bd49-4b3d-a58a-474feaefe89d" name="Changes" comment="modified RegistrationPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationFormTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationFormTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +92,8 @@
       <recent name="$PROJECT_DIR$/src/img" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationFormTests.successFillTest">
-    <configuration name="RegistrationFormTests.successFillTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RegistrationFormTests.successFillTest (1)">
+    <configuration name="RegistrationFormTests.successFillTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -208,7 +210,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RegistrationFormTests.successFillTest" />
+        <item itemvalue="Gradle.RegistrationFormTests.successFillTest (1)" />
         <item itemvalue="Gradle.TestTable.fillInFormTest" />
         <item itemvalue="Gradle.TestTable" />
         <item itemvalue="Gradle.TextBoxTest.successFillTest" />
