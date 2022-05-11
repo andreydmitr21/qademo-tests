@@ -28,12 +28,7 @@ public class RegistrationFormTests {
         new RegistrationPage().setUserEmail("alex@egorov.com");
         new RegistrationPage().setGender("Other");
 
-        $("#genterWrapper").$(byText("Other")).click();
-        $("#userNumber").setValue("1231231230");
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOption("July");
-        $(".react-datepicker__year-select").selectOption("2008");
-        $("[aria-label$='July 30th, 2008']").click();
+        new RegistrationPage().setBirthday("2008","July","30");
         $("#subjectsInput").setValue("Math").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("img/1.png");
@@ -47,11 +42,14 @@ public class RegistrationFormTests {
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
         new RegistrationPage().checkForm("Student Name","Alex Egorov");
-        new RegistrationPage().checkForm("Student Name","Alex Egorov");
-        new RegistrationPage().checkForm("Student Name","Alex Egorov");
-        new RegistrationPage().checkForm("Student Name","Alex Egorov");
-        new RegistrationPage().checkForm("Student Name","Alex Egorov");
-        new RegistrationPage().checkForm("Student Name","Alex Egorov");
-        new RegistrationPage().checkForm("Student Name","Alex Egorov");
+        new RegistrationPage().checkForm("Student Email","alex@egorov.com");
+        new RegistrationPage().checkForm("Gender","Other");
+        new RegistrationPage().checkForm("Mobile","1231231230");
+        new RegistrationPage().checkForm("Date of Birth","30 July 2008");
+        new RegistrationPage().checkForm("Subjects","Math");
+        new RegistrationPage().checkForm("Hobbies","Sports");
+        new RegistrationPage().checkForm("Picture","");
+        new RegistrationPage().checkForm("Address","Some address 1");
+        new RegistrationPage().checkForm("State and City","NCR Noida");
     }
 }

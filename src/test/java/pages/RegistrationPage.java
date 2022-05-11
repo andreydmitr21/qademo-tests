@@ -13,6 +13,11 @@ public class RegistrationPage {
     SelenideElement lastNameInput = $("#lastName");
     SelenideElement userEmailInput = $("#userEmail");
     SelenideElement genderInput = $("#genterWrapper");
+    SelenideElement userNumberInput = $("#userNumber");
+
+    SelenideElement birthdayYearInput = $(".react-datepicker__year-select");
+    SelenideElement birthdayMonthInput = $(".react-datepicker__month-select");
+    SelenideElement birthdayInput = $("#dateOfBirthInput");
 
 
 
@@ -39,6 +44,26 @@ public class RegistrationPage {
     public void setGender(String gender) {
         genderInput.$(byText(gender)).click();
     }
+    public void setUserNumber(String number) {
+        userNumberInput.setValue(number);
+    }
+    public void setBirthday(String year,
+                            String month,
+                            String day) {
+        birthdayInput.click();
+        birthdayYearInput.selectOption(year);
+        birthdayMonthInput.selectOption(month);
+        $(String.format("[aria-label*='%s %s']",month,day)).click();
+    }
+
+
+
+
+
+
+
+
+
 
     public void checkForm(String field, String value) {
         resultsTable.$(byText(field)).parent().shouldHave(text(value));
