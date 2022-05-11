@@ -13,6 +13,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class RegistrationFormTests {
     RegistrationPage registrationPage = new RegistrationPage();
 
+    final private String
+    nameFirst="Alex",
+    nameLast="Egorov",
+    email="alex@egorov.com",
+    gender="Other",
+    number="1231231230"
+    ;
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
@@ -23,11 +30,11 @@ public class RegistrationFormTests {
     void successFillTest() {
         registrationPage.openPage()
 
-                .setFirstName("Alex")
-                .setLastName("Egorov")
-                .setUserEmail("alex@egorov.com")
-                .setGender("Other")
-                .setNumber("1231231230")
+                .setFirstName(nameFirst)
+                .setLastName(nameLast)
+                .setUserEmail(email)
+                .setGender(gender)
+                .setNumber(number)
 
                 .setBirthday("2008", "July", "30")
                 .setSubjects("Math")
@@ -40,10 +47,10 @@ public class RegistrationFormTests {
         $("#submit").pressEnter();
 
         registrationPage.beforeCheckForm()
-                .checkForm("Student Name", "Alex Egorov")
-                .checkForm("Student Email", "alex@egorov.com")
-                .checkForm("Gender", "Other")
-                .checkForm("Mobile", "1231231230")
+                .checkForm("Student Name", nameFirst+" "+nameLast)
+                .checkForm("Student Email", email)
+                .checkForm("Gender", gender)
+                .checkForm("Mobile", number)
                 .checkForm("Date of Birth", "30 July,2008")
                 .checkForm("Subjects", "Math")
                 .checkForm("Hobbies", "Sports")
