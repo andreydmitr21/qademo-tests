@@ -27,32 +27,28 @@ public class RegistrationFormTests {
         new RegistrationPage().setLastName("Egorov");
         new RegistrationPage().setUserEmail("alex@egorov.com");
         new RegistrationPage().setGender("Other");
-        new RegistrationPage().setGender("Other");
+        new RegistrationPage().setNumber("1231231230");
 
-        new RegistrationPage().setBirthday("2008","July","30");
+        new RegistrationPage().setBirthday("2008", "July", "30");
         new RegistrationPage().setSubjects("Math");
         new RegistrationPage().setHobbies("Sports");
-
-
-        $("#uploadPicture").uploadFromClasspath("img/1.png");
-        $("#currentAddress").setValue("Some address 1");
-        $("#state").scrollTo().click();
-        $("#stateCity-wrapper").$(byText("NCR")).click();
-        $("#city").click();
-        $("#stateCity-wrapper").$(byText("Noida")).click();
-        $("#submit").click();
+        new RegistrationPage().setPicture("img/1.png");
+        new RegistrationPage().setAddress("Some address 1");
+//        new RegistrationPage().setState("NCR");
+//        new RegistrationPage().setCity("Noida");
+        $("#submit").pressEnter();
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
-        new RegistrationPage().checkForm("Student Name","Alex Egorov");
-        new RegistrationPage().checkForm("Student Email","alex@egorov.com");
-        new RegistrationPage().checkForm("Gender","Other");
-        new RegistrationPage().checkForm("Mobile","1231231230");
-        new RegistrationPage().checkForm("Date of Birth","30 July 2008");
-        new RegistrationPage().checkForm("Subjects","Math");
-        new RegistrationPage().checkForm("Hobbies","Sports");
-        new RegistrationPage().checkForm("Picture","");
-        new RegistrationPage().checkForm("Address","Some address 1");
-        new RegistrationPage().checkForm("State and City","NCR Noida");
+        new RegistrationPage().checkForm("Student Name", "Alex Egorov");
+        new RegistrationPage().checkForm("Student Email", "alex@egorov.com");
+        new RegistrationPage().checkForm("Gender", "Other");
+        new RegistrationPage().checkForm("Mobile", "1231231230");
+        new RegistrationPage().checkForm("Date of Birth", "30 July,2008");
+        new RegistrationPage().checkForm("Subjects", "Math");
+        new RegistrationPage().checkForm("Hobbies", "Sports");
+        new RegistrationPage().checkForm("Picture", "1.png");
+        new RegistrationPage().checkForm("Address", "Some address 1");
+//        new RegistrationPage().checkForm("State and City","NCR Noida");
     }
 }
