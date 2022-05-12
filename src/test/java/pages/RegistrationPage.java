@@ -31,13 +31,18 @@ public class RegistrationPage {
             cityInput = $("#city"),
             cityWrapInput = $("#stateCity-wrapper"),
 
-    resultsTable = $(".table-responsive");
+    resultsTable = $(".table-responsive"),
+    submit=$("#submit");
 
     // actions
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
         hederTitle.shouldHave(text("Student Registration Form"));
+        return this;
+    }
+    public RegistrationPage doSubmit() {
+        submit.pressEnter();
         return this;
     }
 
